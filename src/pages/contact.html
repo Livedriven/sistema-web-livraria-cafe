@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/app-organizado.css">
+    <title>Contato - Capítulo &amp; Café</title>
+</head>
+
+<body class="contact-page">
+    <header class="contact-header">
+        <div class="contact-header__container">
+            <a class="contact-header__logo" href="#">Capítulo &amp; Café</a>
+
+            <nav class="contact-header__nav" aria-label="Navegação principal">
+                <a class="contact-header__link" href="#">Home</a>
+                <a class="contact-header__link" href="#">Sobre</a>
+                <a class="contact-header__link" href="#">Produtos</a>
+                <a class="contact-header__link contact-header__link--active" href="#">Contato</a>
+            </nav>
+
+            <div class="contact-header__actions">
+                <button class="contact-header__button" aria-label="Abrir sacola de compras" type="button">
+                    <span class="contact-header__icon" aria-hidden="true">shopping_bag</span>
+                </button>
+
+                <button class="contact-header__button" aria-label="Abrir perfil do usuário" type="button">
+                    <span class="contact-header__icon" aria-hidden="true">person</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-hero">
+            <div class="contact-hero__content">
+                <h1 class="contact-hero__title">
+                    Fale com o<br>
+                    Capítulo &amp; Café
+                </h1>
+
+                <p class="contact-hero__description">
+                    Tem uma dúvida, sugestão ou quer saber mais sobre nossos livros e cafés?
+                    Envie sua mensagem e teremos prazer em responder.
+                </p>
+            </div>
+
+            <figure class="contact-hero__image-wrapper">
+                <img 
+                    class="contact-hero__image"
+                    src="../assets/lugar-calmo.jpg"
+                    alt="Cena acolhedora em uma livraria e cafeteria, com iluminação quente, livros, mesa de madeira, livro aberto e uma xícara de café."
+                >
+            </figure>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-section__container">
+                <div class="contact-form-card">
+                    <h2 class="contact-form-card__title">Envie sua mensagem</h2>
+
+                    <form class="contact-form" action="#" method="post">
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="nome">Nome</label>
+                            <input 
+                                class="contact-form__field"
+                                id="nome" 
+                                name="nome"
+                                type="text" 
+                                placeholder="Digite seu nome"
+                            >
+                        </div>
+
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="email">E-mail</label>
+                            <input 
+                                class="contact-form__field"
+                                id="email" 
+                                name="email"
+                                type="email" 
+                                placeholder="Digite seu e-mail"
+                            >
+                        </div>
+
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="assunto">Assunto</label>
+                            <input 
+                                class="contact-form__field"
+                                id="assunto" 
+                                name="assunto"
+                                type="text" 
+                                placeholder="Digite o assunto da mensagem"
+                            >
+                        </div>
+
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="mensagem">Mensagem</label>
+                            <textarea 
+                                class="contact-form__textarea"
+                                id="mensagem" 
+                                name="mensagem"
+                                rows="5" 
+                                placeholder="Escreva sua mensagem"
+                            ></textarea>
+                        </div>
+
+                        <div class="contact-form__actions">
+                            <button class="contact-form__button" type="submit">
+                                Enviar mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <aside class="contact-info" aria-label="Informações de contato">
+                <article class="contact-info__item">
+                    <span class="contact-info__icon" aria-hidden="true">location_on</span>
+
+                    <div class="contact-info__content">
+                        <h3 class="contact-info__title">Endereço</h3>
+                        <p class="contact-info__text">Rua das Letras, 128 - Centro</p>
+                    </div>
+                </article>
+
+                <article class="contact-info__item">
+                    <span class="contact-info__icon" aria-hidden="true">call</span>
+
+                    <div class="contact-info__content">
+                        <h3 class="contact-info__title">Telefone</h3>
+                        <p class="contact-info__text">(11) 99999-2024</p>
+                    </div>
+                </article>
+
+                <article class="contact-info__item">
+                    <span class="contact-info__icon" aria-hidden="true">mail</span>
+
+                    <div class="contact-info__content">
+                        <h3 class="contact-info__title">E-mail</h3>
+                        <p class="contact-info__text">contato@capituloecafe.com</p>
+                    </div>
+                </article>
+
+                <article class="contact-info__item">
+                    <span class="contact-info__icon" aria-hidden="true">schedule</span>
+
+                    <div class="contact-info__content">
+                        <h3 class="contact-info__title">Horário</h3>
+                        <p class="contact-info__text">Segunda a sábado, das 09h às 20h</p>
+                    </div>
+                </article>
+            </aside>
+        </section>
+
+        <section class="contact-quote">
+            <div class="contact-quote__container">
+                <h2 class="contact-quote__title">
+                    "Um lugar pensado para boas conversas, boas leituras e cafés memoráveis."
+                </h2>
+
+                <figure class="contact-quote__image-wrapper">
+                    <img 
+                        class="contact-quote__image"
+                        src="../assets/Livraria.jpg"
+                        alt="Interior moderno e minimalista de uma livraria cafeteria, com luz natural, móveis de madeira, prateleiras com livros e equipamentos de café artesanal."
+                    >
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="contact-footer">
+        <div class="contact-footer__container">
+            <div class="contact-footer__brand">
+                <strong class="contact-footer__logo">Capítulo &amp; Café</strong>
+                <p class="contact-footer__copy">
+                    © 2024 Capítulo &amp; Café. Slow Living, Intencionalidade e Café.
+                </p>
+            </div>
+
+            <nav class="contact-footer__nav" aria-label="Links do rodapé">
+                <a class="contact-footer__link" href="#">Privacidade</a>
+                <a class="contact-footer__link" href="#">Termos de Uso</a>
+                <a class="contact-footer__link" href="#">FAQ</a>
+                <a class="contact-footer__link" href="#">Encontre-nos</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
