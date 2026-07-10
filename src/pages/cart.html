@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/app.css">
+    <link rel="shortcut icon" href="../assets/xicara-de-cafe.png" type="image/x-png">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav" aria-label="Navegação principal">
+            <div class="navbar__container">
+                <a href="#" class="header__logo">Capítulo &amp; Café</a>
+                <button class="header__menu-button" type="button" aria-label="Abrir menu" style="display: none;">
+                    <span class="header__menu-icon material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
+
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="./home.html" class="header__link">Home</a></li>
+                    <li class="navbar__item"><a href="./about.html" class="header__link">Sobre</a></li>
+                    <li class="navbar__item"><a href="./products.html" class="header__link">Produtos</a></li>
+                    <li class="navbar__item"><a href="./contact.html" class="header__link">Contato</a></li>
+                </ul>
+
+                <div class="header__actions">
+                    <button class="header__button" type="button">
+                        <span class="header__icon material-symbols-outlined" aria-hidden="true">account_circle</span>
+                    </button>
+                    <span id="nameUser" class="header__logo"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main cart-page" id="main-cart">
+
+        <header class="cart-page__header">
+            <p class="cart-page__subtitle">SEU CARRINHO</p>
+            <h1 class="cart-page__title">Revise seus próximos capítulos</h1>
+        </header>
+
+        <section class="cart-page__content" aria-label="Carrinho de compras">
+            <section class="cart-page__items-section" aria-label="Produtos no carrinho">
+                <div class="cart-page__items" id="cartItems"></div>
+            </section>
+
+            <aside class="cart-summary" aria-label="Resumo do pedido">
+                <h2 class="cart-summary__title">Resumo do pedido</h2>
+
+                <div class="cart-summary__row">
+                    <span class="cart-summary__label">Subtotal:</span>
+                    <span class="cart-summary__value" id="cartSubtotal"></span>
+                </div>
+
+                <form class="cart-summary__coupon-form" id="couponForm">
+                    <label class="cart-summary__coupon-label" for="couponInput">Cupom de desconto</label>
+
+                    <div class="cart-summary__coupon-group">
+                        <input class="cart-summary__coupon-input" id="couponInput" name="coupon"
+                            placeholder="Insira seu código" type="text" />
+
+                        <button class="cart-summary__coupon-button" type="submit">
+                            Aplicar
+                        </button>
+                    </div>
+                </form>
+
+                <div class="cart-summary__total">
+                    <span class="cart-summary__total-label">Total</span>
+                    <span class="cart-summary__total-value" id="cartTotal"></span>
+                </div>
+
+                <button class="cart-summary__checkout-button" id="checkoutButton" type="button">
+                    Finalizar compra
+                </button>
+
+                <a class="cart-summary__continue-link" href="./products.html">
+                    Continuar comprando
+                </a>
+            </aside>
+        </section>
+
+        <section class="recommendations" aria-labelledby="recommendationsTitle">
+            <h2 class="recommendations__title" id="recommendationsTitle">
+                Talvez você também goste
+            </h2>
+
+            <div class="recommendations__grid" id="recommendationsList"></div>
+        </section>
+
+        <template id="cartItemTemplate">
+            <article class="cart-item">
+                <div class="cart-item__image-box">
+                    <img class="cart-item__image" src="" alt="" />
+                </div>
+
+                <div class="cart-item__content">
+                    <div class="cart-item__header">
+                        <div class="cart-item__info">
+                            <p class="cart-item__category" data-cart-field="category"></p>
+                            <h3 class="cart-item__title" data-cart-field="name"></h3>
+                            <p class="cart-item__price" data-cart-field="price"></p>
+                        </div>
+
+                        <button class="cart-item__remove-button" type="button" aria-label="Remover produto">
+                            <span class="cart-item__remove-icon material-symbols-outlined"
+                                aria-hidden="true">close</span>
+                        </button>
+                    </div>
+
+                    <div class="cart-item__footer">
+                        <div class="cart-item__quantity-control">
+                            <button class="cart-item__quantity-button" type="button" data-cart-action="decrease">
+                                -
+                            </button>
+
+                            <span class="cart-item__quantity" data-cart-field="quantity"></span>
+
+                            <button class="cart-item__quantity-button" type="button" data-cart-action="increase">
+                                +
+                            </button>
+                        </div>
+
+                        <p class="cart-item__subtotal" data-cart-field="subtotal"></p>
+                    </div>
+                </div>
+            </article>
+        </template>
+
+        <template id="recommendationCardTemplate">
+            <article class="recommendation-card">
+                <div class="recommendation-card__image-box">
+                    <img class="recommendation-card__image" src="" alt="" />
+                </div>
+
+                <div class="recommendation-card__content">
+                    <h3 class="recommendation-card__title" data-recommendation-field="name"></h3>
+                    <p class="recommendation-card__price" data-recommendation-field="price"></p>
+                </div>
+            </article>
+        </template>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <section class="footer__brand">
+                <h2 class="footer__title">Capítulo & Café</h2>
+                <p class="footer__copy">© 2024 Capítulo & Café. Todos os direitos reservados.</p>
+            </section>
+
+            <section class="social_links">
+                <img src="../assets/instagram.png" alt="instagram">
+                <img src="../assets/twitter.png" alt="X">
+            </section>
+        </div>
+    </footer>
+    <script type="module" src="../scripts/app.js"></script>
+</body>
+
+</html>
