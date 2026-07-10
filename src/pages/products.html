@@ -1,11 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" href="../style/app.css">
+    <link rel="shortcut icon" href="../assets/xicara-de-cafe.png" type="image/x-png">
+    <title>Capítulo &amp; Café - Slow living, one page at a time.</title>
 </head>
-<body>
-    
+
+<body class="page">
+    <header class="header">
+        <nav class="header__nav" aria-label="Navegação principal">
+            <div class="navbar__container">
+                <a href="#" class="header__logo">Capítulo &amp; Café</a>
+                <button class="header__menu-button" type="button" aria-label="Abrir menu" style="display: none;">
+                    <span class="header__menu-icon material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
+
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="./home.html" class="header__link">Home</a></li>
+                    <li class="navbar__item"><a href="./about.html" class="header__link">Sobre</a></li>
+                    <li class="navbar__item"><a href="./products.html"
+                            class="header__link header__link--active">Produtos</a></li>
+                    <li class="navbar__item"><a href="./contact.html" class="header__link">Contato</a></li>
+                </ul>
+
+                <div class="header__actions">
+                    <button class="header__button" aria-label="Abrir sacola de compras" type="button">
+                        <a href="./cart.html">
+                            <span class="header__icon material-symbols-outlined" aria-hidden="true">
+                                shopping_cart
+                            </span>
+                        </a>
+                    </button>
+                    <button class="header__button" type="button">
+                        <span class="header__icon material-symbols-outlined" aria-hidden="true">account_circle</span>
+                    </button>
+                    <span id="nameUser" class="header__logo"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main products-page">
+        <header class="products-page__header">
+            <h1 class="products-page__title">Nossos produtos</h1>
+            <p class="products-page__description">
+                Escolha entre livros especiais, cafés selecionados e itens pensados para transformar seus momentos de
+                leitura.
+            </p>
+        </header>
+
+        <section class="products-page__section" aria-labelledby="products-list-title">
+            <h2 class="products-page__section-title" id="products-list-title">Lista de produtos</h2>
+
+            <div class="products-page__grid" id="productsContainer">
+            </div>
+        </section>
+
+        <section class="product-form" aria-labelledby="product-form-title">
+            <div class="product-form__bookmark" aria-hidden="true"></div>
+
+            <h2 class="product-form__title" id="product-form-title">Cadastrar produto</h2>
+
+            <form class="product-form__content" id="form-register-product">
+                <div class="product-form__group">
+                    <label class="product-form__label" for="product-name">Nome do Produto <span>*</span> </label>
+                    <input class="product-form__input" id="product-name" name="product-name" type="text"
+                        placeholder="Digite o nome do produto">
+                </div>
+
+                <div class="product-form__group">
+                    <label class="product-form__label" for="product-price">Preço <span>*</span></label>
+
+                    <div class="product-form__price-field">
+                        <span class="product-form__price-symbol">R$</span>
+                        <input class="product-form__input product-form__input--price" id="product-price"
+                            name="product-price" type="text" placeholder="0,00">
+                    </div>
+                </div>
+
+                <div class="product-form__group">
+                    <label class="product-form__label" for="product-image">URL da imagem</label>
+                    <input class="product-form__input" id="product-image" name="product-image" type="url"
+                        placeholder="Insira a URL da imagem">
+                </div>
+
+                <div class="product-form__group">
+                    <label class="product-form__label" for="short-desc">Descrição Curta <span>*</span></label>
+                    <textarea class="product-form__textarea" id="short-desc" name="short-desc" rows="2"
+                        placeholder="Breve resumo para a listagem"></textarea>
+                </div>
+
+                <div class="product-form__group">
+                    <label class="product-form__label" for="full-desc">Descrição Completa</label>
+                    <textarea class="product-form__textarea" id="full-desc" name="full-desc" rows="4"
+                        placeholder="Detalhes técnicos e história do produto"></textarea>
+                </div>
+
+                <button class="product-form__button" type="submit">
+                    <span class="material-symbols-outlined product-form__button-icon">add</span>
+                    Cadastrar produto
+                </button>
+            </form>
+        </section>
+
+        <section class="product-actions" aria-label="Ações dos produtos">
+            <div class="product-actions__buttons">
+                <button class="product-actions__button product-actions__button--danger" type="button" id="btnDelete">
+                    <span class="material-symbols-outlined product-actions__icon">delete</span>
+                    Excluir último
+                </button>
+
+                <button class="product-actions__button product-actions__button--sort" id="btnSort" type="button">
+                    <span class="material-symbols-outlined product-actions__icon">sort_by_alpha</span>
+                    Organizar (A-Z)
+                </button>
+            </div>
+
+            <template>
+                <p class="product-actions__feedback">
+                    <span class="material-symbols-outlined product-actions__feedback-icon">check_circle</span>
+                    Produto cadastrado com sucesso.
+                </p>
+            </template>
+
+            <div class="product-actions__counter">
+                <span class="product-actions__counter-text">Total de produtos: <span id="countProducts"></span></span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <section class="footer__brand">
+                <h2 class="footer__title">Capítulo & Café</h2>
+                <p class="footer__copy">© 2024 Capítulo & Café. Todos os direitos reservados.</p>
+            </section>
+
+            <section class="social_links">
+                <img src="../assets/instagram.png" alt="instagram">
+                <img src="../assets/twitter.png" alt="X">
+            </section>
+        </div>
+    </footer>
+    <script type="module" src="../scripts/app.js"></script>
 </body>
+
 </html>
