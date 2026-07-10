@@ -87,11 +87,20 @@ body {
 .input-group input {
     height: 100%;
     width: 100%;
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
     outline: none;
     cursor: text;
 
+}
+
+.input-group input:-webkit-autofill
+.input-group input:-webkit-autofill:hover,
+.input-group input:-webkit-autofill:focus,
+.input-group input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 100px transparent inset !important;
+
+    -webkit-text-fill-color: inherit !important;
 }
 
 .input-group label {
@@ -104,7 +113,7 @@ body {
 
 .input-group input:focus~label,
 .input-group input:not(:placeholder-shown)~label {
-    translate: -20px -20px;
+    transform: translateY(-20px);
     transform: scale(0.80);
 }
 
