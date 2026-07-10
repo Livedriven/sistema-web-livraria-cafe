@@ -4,6 +4,9 @@
   "description": "��#\u0000 \u0000s\u0000i\u0000s\u0000t\u0000e\u0000m\u0000a\u0000-\u0000w\u0000e\u0000b\u0000-\u0000l\u0000i\u0000v\u0000r\u0000a\u0000r\u0000i\u0000a\u0000-\u0000c\u0000a\u0000f\u0000e\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
+    "dev": "vite --open",
+    "preview": "vite preview",
+    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Livedriven/sistema-web-livraria-cafe/issues"
   },
-  "homepage": "https://github.com/Livedriven/sistema-web-livraria-cafe#readme"
+  "homepage": "https://github.com/Livedriven/sistema-web-livraria-cafe#readme",
+  "dependencies": {
+    "sweetalert2": "^11.26.25",
+    "vite": "^8.1.3"
+  }
 }
