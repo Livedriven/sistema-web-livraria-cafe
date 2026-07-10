@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Capítulo &amp; Café</title>
+    <link rel="stylesheet" href="./src/style/app.css">
+    <link rel="shortcut icon" href="../assets/xicara-de-cafe.png" type="image/x-png">
 </head>
+
 <body>
-    
+    <section class="main-section">
+        <div class="central-div">
+            <div class="logo-internal-div">
+                <span class="material-symbols-outlined" aria-hidden="true">auto_stories</span>
+                <h2>Capítulo &amp; Café</h2>
+            </div>
+            <div class="disc-internal-div">
+                <h2>Entrar na sua conta</h2>
+                <p>Acesse sua área e continue sua experiência
+                    entre livros, cafés e boas escolhas.</p>
+            </div>
+            <div class="form-internal-div">
+                <form action="" id="form_login">
+                    <div class="input-group" >
+                        <span class="material-symbols-outlined">account_circle</span>
+
+                        <input type="text" id="input1-login" placeholder=" ">
+                        <label for="input1-login">
+                            Digite seu nome de usuário
+                        </label>
+                    </div>
+                    <div class="password-div">
+                        <div class="input-group">
+                            <span class="material-symbols-outlined">lock</span>
+
+                            <input type="password" id="input2-login" placeholder=" ">
+                            <label for="input2-login">
+                                Digite sua senha
+                            </label>
+                        </div>
+                        <p id="paviso2"></p>
+
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+            <p>Ainda não tem uma conta? <span class="redirect">
+                    <a href="./src/pages/signup.html">Cadastre-se</a>
+                </span></p>
+
+        </div>
+    </section>
+    <script type="module" src="./src/scripts/auth.js"></script>
 </body>
+
 </html>
