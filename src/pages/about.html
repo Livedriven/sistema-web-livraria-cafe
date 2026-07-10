@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/about.css">
-    <title>Sobre Nós - Capítulo & Café</title>
+    <link rel="stylesheet" href="../style/app.css">
+    <link rel="shortcut icon" href="../assets/xicara-de-cafe.png" type="image/x-png">
+    <title>Sobre Nós - Capítulo &amp; Café</title>
 </head>
-<body>
+
+<body class="page">
     <header class="header">
-        <nav class="navbar" aria-label="Menu principal">
+        <nav class="header__nav" aria-label="Navegação principal">
             <div class="navbar__container">
-                <a href="index.html" class="navbar__logo">Capítulo & Café</a>
+                <a href="index.html" class="header__logo">Capítulo &amp; Café</a>
+
+                <button class="header__menu-button" type="button" aria-label="Abrir menu" style="display: none;">
+                    <span class="header__menu-icon material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
 
                 <ul class="navbar__list">
                     <li class="navbar__item">
-                        <a href="home.html" class="navbar__link">Home</a>
+                        <a href="home.html" class="header__link">Home</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="about.html" class="navbar__link navbar__link--active">Sobre</a>
+                        <a href="about.html" class="header__link header__link--active">Sobre</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="products.html" class="navbar__link">Produtos</a>
+                        <a href="products.html" class="header__link">Produtos</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="contact.html" class="navbar__link">Contato</a>
+                        <a href="contact.html" class="header__link">Contato</a>
                     </li>
                 </ul>
+                <div class="header__actions">
+                    <button class="header__button" aria-label="Abrir sacola de compras" type="button">
+                        <a href="./cart.html"><span class="header__icon material-symbols-outlined"
+                                aria-hidden="true">shopping_cart</span></a>
+                    </button>
 
-                <a href="login.html" class="navbar__account">Conta</a>
+                    <button class="header__button" aria-label="Abrir perfil do usuário" type="button">
+                        <span class="header__icon material-symbols-outlined" aria-hidden="true">account_circle</span>
+                    </button>
+                    <span id="nameUser" class="header__logo"></span>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="main-container">
+    <main class="main">
         <section class="about-hero">
             <div class="about-hero__content">
                 <span class="about-hero__label">Nossa História</span>
@@ -42,7 +58,9 @@
                 </h1>
 
                 <p class="about-hero__description">
-                    Nascemos do desejo de resgatar o tempo. Em um mundo acelerado, criamos um santuário onde o aroma do café recém-torrado se mistura ao cheiro de papel novo. Acreditamos que um bom livro e uma xícara perfeita são convites para pausas significativas.
+                    Nascemos do desejo de resgatar o tempo. Em um mundo acelerado, criamos um santuário onde o aroma do
+                    café recém-torrado se mistura ao cheiro de papel novo. Acreditamos que um bom livro e uma xícara
+                    perfeita são convites para pausas significativas.
                 </p>
 
                 <div class="about-hero__actions">
@@ -52,20 +70,18 @@
             </div>
 
             <figure class="about-hero__image-wrapper">
-                <img
-                    src="../assets/lugar-calmo.jpg"
-                    alt="Ambiente aconchegante da livraria Capítulo & Café"
-                    class="about-hero__image"
-                >
+                <img src="../assets/lugar-calmo.jpg" alt="Ambiente aconchegante da livraria Capítulo & Café"
+                    class="about-hero__image">
             </figure>
         </section>
 
         <section class="about-quote">
             <div class="about-quote__container">
-                <span class="about-quote__icon" aria-hidden="true">menu_book</span>
+                <span class="about-quote__icon material-symbols-outlined" aria-hidden="true">menu_book</span>
 
                 <p class="about-quote__text">
-                    “Acreditamos que bons livros e bons cafés não precisam de pressa. Cada detalhe do nosso espaço foi pensado para transformar a leitura em uma experiência sensorial.”
+                    “Acreditamos que bons livros e bons cafés não precisam de pressa. Cada detalhe do nosso espaço foi
+                    pensado para transformar a leitura em uma experiência sensorial.”
                 </p>
             </div>
         </section>
@@ -77,7 +93,7 @@
 
             <div class="about-values__grid">
                 <article class="about-values__card">
-                    <span class="about-values__icon" aria-hidden="true">auto_awesome</span>
+                    <span class=" material-symbols-outlined" aria-hidden="true">auto_awesome</span>
 
                     <h3 class="about-values__card-title">Curadoria com propósito</h3>
 
@@ -87,7 +103,7 @@
                 </article>
 
                 <article class="about-values__card">
-                    <span class="about-values__icon" aria-hidden="true">weekend</span>
+                    <span class="about-values__icon material-symbols-outlined" aria-hidden="true">weekend</span>
 
                     <h3 class="about-values__card-title">Ambiente para desacelerar</h3>
 
@@ -97,7 +113,7 @@
                 </article>
 
                 <article class="about-values__card">
-                    <span class="about-values__icon" aria-hidden="true">handyman</span>
+                    <span class="about-values__icon material-symbols-outlined" aria-hidden="true">handyman</span>
 
                     <h3 class="about-values__card-title">Detalhes artesanais</h3>
 
@@ -110,18 +126,17 @@
 
         <section class="about-experience">
             <figure class="about-experience__image-wrapper">
-                <img
-                    src="../assets/Livros.jpg"
-                    alt="Livros empilhados ao lado de uma xícara de café artesanal"
-                    class="about-experience__image"
-                >
+                <img src="../assets/Livros.jpg" alt="Livros empilhados ao lado de uma xícara de café artesanal"
+                    class="about-experience__image">
             </figure>
 
             <div class="about-experience__content">
                 <h2 class="about-experience__title">Entre páginas e aromas</h2>
 
                 <p class="about-experience__description">
-                    Nossa jornada começou com uma simples observação: a leitura profunda exige o ambiente certo. Ao unir uma torrefação especializada a uma coleção literária meticulosamente selecionada, criamos uma simbiose perfeita. O café desperta os sentidos, enquanto o livro nutre a alma.
+                    Nossa jornada começou com uma simples observação: a leitura profunda exige o ambiente certo. Ao unir
+                    uma torrefação especializada a uma coleção literária meticulosamente selecionada, criamos uma
+                    simbiose perfeita. O café desperta os sentidos, enquanto o livro nutre a alma.
                 </p>
 
                 <blockquote class="about-experience__quote">
@@ -131,7 +146,6 @@
         </section>
 
         <section class="about-numbers">
-            <h2 class="sr-only">Nossa essência em números</h2>
 
             <div class="about-numbers__grid">
                 <article class="about-numbers__item">
@@ -176,20 +190,13 @@
                 <p class="footer__copy">© 2024 Capítulo & Café. Todos os direitos reservados.</p>
             </section>
 
-            <nav class="footer__nav" aria-label="Links legais">
-                <ul class="footer__list">
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Termos de Uso</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Privacidade</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">FAQ</a>
-                    </li>
-                </ul>
-            </nav>
+            <section class="social_links">
+                <img src="../assets/instagram.png" alt="instagram">
+                <img src="../assets/twitter.png" alt="X">
+            </section>
         </div>
     </footer>
+    <script type="module" src="../scripts/app.js"></script>
 </body>
+
 </html>
