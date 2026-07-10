@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/app.css">
+    <link rel="shortcut icon" href="../assets/xicara-de-cafe.png" type="image/x-png">
+    <title>Produtos Details</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <nav class="header__nav" aria-label="Navegação principal">
+            <div class="navbar__container">
+                <a href="#" class="header__logo">Capítulo &amp; Café</a>
+                <button class="header__menu-button" type="button" aria-label="Abrir menu" style="display: none;">
+                    <span class="header__menu-icon material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
+
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="./home.html" class="header__link">Home</a></li>
+                    <li class="navbar__item"><a href="./about.html" class="header__link">Sobre</a></li>
+                    <li class="navbar__item"><a href="./products.html"
+                            class="header__link header__link--active">Produtos</a></li>
+                    <li class="navbar__item"><a href="./contact.html" class="header__link">Contato</a></li>
+                </ul>
+
+                <div class="header__actions">
+                    <button class="header__button" aria-label="Abrir sacola de compras" type="button">
+                        <a href="./cart.html">
+                            <span class="header__icon material-symbols-outlined" aria-hidden="true">
+                                shopping_cart
+                            </span>
+                        </a>
+                    </button>
+                    <button class="header__button" type="button">
+                        <span class="header__icon material-symbols-outlined" aria-hidden="true">account_circle</span>
+                    </button>
+                    <span id="nameUser" class="header__logo"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main product-page">
+        <section class="product-detail" aria-labelledby="product-title">
+            <div class="product-gallery">
+                <template>
+                    <figure class="product-gallery__image-wrapper">
+                        <img class="product-gallery__image" id="imgProduct">
+                    </figure>
+                </template>
+            </div>
+            <div class="product-info">
+                <nav class="breadcrumb" aria-label="Caminho da página">
+                    <ol class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a href="./home.html" class="breadcrumb__link">Home</a>
+                        </li>
+
+                        <li class="breadcrumb__item">
+                            <span class="material-symbols-outlined breadcrumb__icon">chevron_right</span>
+                        </li>
+
+                        <li class="breadcrumb__item">
+                            <a href="./products.html" class="breadcrumb__link">Produtos</a>
+                        </li>
+
+                        <li class="breadcrumb__item">
+                            <span class="material-symbols-outlined breadcrumb__icon">chevron_right</span>
+                        </li>
+
+                        <li class="breadcrumb__item">
+                            <span class="breadcrumb__current" id="currentProduct"></span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <h1 class="product-info__title" id="product-title">
+
+                </h1>
+
+                <p class="product-info__price" id="product-price">
+
+                </p>
+
+                <p class="product-info__description" id="product-description">
+
+                </p>
+
+                <div class="product-actions">
+                    <div class="quantity-control" aria-label="Controle de quantidade">
+                        <button class="quantity-control__button" type="button" id="decreasedQuantity" aria-label="Diminuir quantidade">
+                            <span class="material-symbols-outlined quantity-control__icon">remove</span>
+                        </button>
+
+                        <input class="quantity-control__input" type="number" min="1" value="1" aria-label="Quantidade">
+
+                        <button class="quantity-control__button" type="button" id="addQuantity" aria-label="Aumentar quantidade">
+                            <span class="material-symbols-outlined quantity-control__icon">add</span>
+                        </button>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <button class="product-actions__button" id="btnAddToCart" type="button">
+                            Adicionar ao Carrinho
+                        </button>
+                        <button class="product-actions__button" id="btnBuyProduct" type="button">
+                            Comprar Produto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <section class="footer__brand">
+                <h2 class="footer__title">Capítulo & Café</h2>
+                <p class="footer__copy">© 2024 Capítulo & Café. Todos os direitos reservados.</p>
+            </section>
+
+            <section class="social_links">
+                <img src="../assets/instagram.png" alt="instagram">
+                <img src="../assets/twitter.png" alt="X">
+            </section>
+        </div>
+    </footer>
+    <script type="module" src="../scripts/app.js"></script>
+</body>
+
+</html>
