@@ -1,11 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" href="../style/app.css">
+    <link rel="shortcut icon" href="../assets/xicara-de-cafe.png" type="image/x-png">
+    <title>Capítulo &amp; Café - Slow living, one page at a time.</title>
 </head>
-<body>
-    
+
+<body class="page">
+    <header class="header">
+        <nav class="header__nav" aria-label="Navegação principal">
+            <div class="navbar__container">
+                <a href="#" class="header__logo">Capítulo &amp; Café</a>
+                <button class="header__menu-button" type="button" aria-label="Abrir menu" style="display: none;">
+                        <span class="header__menu-icon material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
+                
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a href="./home.html" class="header__link header__link--active">Home</a></li>
+                        <li class="navbar__item"><a href="./about.html" class="header__link">Sobre</a></li>
+                        <li class="navbar__item"><a href="./products.html" class="header__link">Produtos</a></li>
+                        <li class="navbar__item"><a href="./contact.html" class="header__link">Contato</a></li>
+                    </ul>
+                
+                <div class="header__actions">
+                    <button class="header__button" aria-label="Abrir sacola de compras" type="button">
+                        <a href="./cart.html">
+                            <span class="header__icon material-symbols-outlined" aria-hidden="true">
+                                shopping_cart
+                            </span>
+                        </a>
+                    </button>
+                    <button class="header__button" type="button">
+                        <span class="header__icon material-symbols-outlined" aria-hidden="true">account_circle</span>
+                    </button>
+                    <span id="nameUser" class="header__logo"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__content">
+                <div class="hero__text-content">
+                    <h1 class="hero__title">Livros, café e momentos para desacelerar.</h1>
+
+                    <p class="hero__description">
+                        Uma experiência acolhedora para quem ama boas histórias, aromas marcantes e pequenos rituais de pausa.
+                    </p>
+                </div>
+
+                <div class="hero__actions">
+                    <a href="./products.html" class="hero__button hero__button--primary">
+                        Ver produtos
+                    </a>
+
+                    <a href="./about.html" class="hero__button hero__button--secondary">
+                        Conhecer a cafeteria
+                        <span class="hero__button-icon material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero__media">
+                <img
+                    class="hero__image"
+                    alt="Capítulo &amp; Café Interior"
+                    src="../assets/lugar-calmo.jpg"
+                />
+
+                <div class="hero__image-decoration"></div>
+            </div>
+        </section>
+
+        <section class="welcome">
+            <div class="welcome__content">
+                <span class="welcome__icon material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+
+                <p class="welcome__text">
+                    Bem-vindo ao Capítulo &amp; Café, seu espaço para descobrir livros especiais, cafés selecionados e produtos pensados para leitores.
+                </p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="features__grid">
+                <article class="features__card features__card--coffee">
+                    <div class="features__icon-box">
+                        <span class="features__icon material-symbols-outlined" aria-hidden="true">local_cafe</span>
+                    </div>
+
+                    <h3 class="features__title">Cafés artesanais</h3>
+
+                    <p class="features__description">
+                        Grãos selecionados para acompanhar sua leitura perfeita.
+                    </p>
+                </article>
+
+                <article class="features__card features__card--books">
+                    <div class="features__icon-box">
+                        <span class="features__icon material-symbols-outlined" aria-hidden="true">menu_book</span>
+                    </div>
+
+                    <h3 class="features__title">Curadoria de livros</h3>
+
+                    <p class="features__description">
+                        Edições especiais e histórias que merecem ser vividas.
+                    </p>
+                </article>
+
+                <article class="features__card features__card--gifts">
+                    <div class="features__icon-box">
+                        <span class="features__icon material-symbols-outlined" aria-hidden="true">card_giftcard</span>
+                    </div>
+
+                    <h3 class="features__title">Presentes para leitores</h3>
+
+                    <p class="features__description">
+                        Itens pensados com carinho para quem ama o universo literário.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="curation">
+            <div class="curation__header">
+                <h2 class="curation__title">Nossa Curadoria</h2>
+
+                <a href="./products.html" class="curation__link">
+                    Ver todos
+                    <span class="curation__link-icon material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="curation__grid" id="curationContainer">
+                
+            </div>
+        </section>
+
+        <section class="reading-cta">
+            <div class="reading-cta__content">
+                <h2 class="reading-cta__title">Monte seu próximo momento de leitura.</h2>
+
+                <a href="./products.html" class="reading-cta__button">
+                    Ir para produtos
+                    <span class="reading-cta__button-icon material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <section class="footer__brand">
+                <h2 class="footer__title">Capítulo & Café</h2>
+                <p class="footer__copy">© 2024 Capítulo & Café. Todos os direitos reservados.</p>
+            </section>
+
+            <section class="social_links">
+                <img src="../assets/instagram.png" alt="instagram">
+                <img src="../assets/twitter.png" alt="X">
+            </section>
+        </div>
+    </footer>
+    <script type="module" src="../scripts/app.js"></script>
 </body>
+
 </html>
