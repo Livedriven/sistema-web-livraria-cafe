@@ -1,0 +1,204 @@
+/* =========================================================
+   Página contact
+   ========================================================= */
+
+.contact-hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 4rem 1rem 3rem;
+}
+
+.contact-hero__content {
+    width: 100%;
+}
+
+.contact-hero__title {
+    font-family: var(--font-headline);
+    font-size: clamp(2.3rem, 11vw, 3.4rem);
+    line-height: 0.95;
+    color: var(--color-text-main);
+    letter-spacing: -0.04em;
+    max-width: 12ch;
+}
+
+.contact-hero__description {
+    margin-top: 1.3rem;
+    max-width: 38rem;
+    color: var(--color-text-muted);
+    font-size: clamp(0.95rem, 2.6vw, 1.08rem);
+    line-height: 1.75;
+}
+
+.contact-hero__image-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-hero__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.contact-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 1rem 5rem;
+}
+
+.contact-section__container {
+    width: 100%;
+}
+
+.contact-form-card {
+    width: 100%;
+    background-color: var(--color-section-bg);
+    border: 1px solid var(--color-detail-muted);
+    padding: 2rem 1.5rem;
+}
+
+.contact-form-card__title {
+    margin-bottom: 1.8rem;
+    text-align: center;
+    font-family: var(--font-headline);
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    line-height: 1.1;
+    color: var(--color-text-main);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.contact-form__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.contact-form__field,
+.contact-form__textarea {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--color-detail-muted);
+    background-color: transparent;
+    padding: 0.85rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contact-form__textarea {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+.contact-form__actions {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--color-detail-muted);
+}
+
+.contact-form__button {
+    min-width: 12rem;
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    padding: 0.95rem 1.8rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.contact-form__button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.9rem;
+    align-content: center;
+}
+
+.contact-info__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.contact-info__icon {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.45rem;
+    line-height: 1;
+    color: var(--color-text-main);
+    text-transform: none;
+    letter-spacing: normal;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
+
+.contact-info__title {
+    margin-bottom: 0.35rem;
+    color: var(--color-text-main);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.contact-info__text {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contact-quote {
+    background-color: var(--color-card-bg-muted);
+    padding: 4rem 1rem;
+}
+
+.contact-quote__container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+}
+
+.contact-quote__title {
+    max-width: 44rem;
+    font-family: var(--font-headline);
+    font-size: clamp(1.8rem, 7vw, 3rem);
+    line-height: 1.05;
+    color: var(--color-text-main);
+    letter-spacing: -0.04em;
+}
+
+.contact-quote__image-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-quote__image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
