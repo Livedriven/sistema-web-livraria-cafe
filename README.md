@@ -118,6 +118,16 @@ sistema-web-livraria-cafe/
     │   ├── contact.html
     │   └── signup.html
     ├── style/
+    │   ├── app.css
+    │   ├── global.css
+    │   └── pages/
+    │       ├── home.css
+    │       ├── products.css
+    │       ├── product.css
+    │       ├── cart.css
+    │       ├── about.css
+    │       ├── contact.css
+    │       └── login.css
     └── scripts/
         ├── app.js
         ├── auth.js
