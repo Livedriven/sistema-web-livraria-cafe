@@ -98,7 +98,7 @@
 
 .contact-form__textarea {
     min-height: 9rem;
-    resize: vertical;
+    resize: none;
 }
 
 .contact-form__actions {

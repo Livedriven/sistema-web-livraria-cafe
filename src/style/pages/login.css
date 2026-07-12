@@ -108,12 +108,11 @@ body {
     position: absolute;
     left: 35px;
     pointer-events: none;
-    transition: transform 0.3s;
+    transition: transform 0.3s, translate 0.3s;
 }
 
 .input-group input:focus~label,
 .input-group input:not(:placeholder-shown)~label {
-        
         transform: translate(-20px,-20px) scale(0.80);
 }
 
