@@ -255,16 +255,14 @@ Os dados são armazenados localmente no navegador.
 
 # 💡 Melhorias futuras
 
-* Integração com API REST.
-* Backend em Node.js.
-* Banco de dados relacional.
-* Upload de imagens.
 * Pesquisa de produtos.
-* Paginação.
+* Upload de imagens.
 * Lista de favoritos.
 * Histórico de pedidos.
+* Paginação.
 * Área administrativa.
-* Dashboard de vendas.
+* Backend em Node.js.
+* Banco de dados relacional.
 
 ---
 
